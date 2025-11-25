@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 
 # 1. Load Model yang sudah disimpan
-model = joblib.load('diabetes_model.pkl')
+model = joblib.load('diabetes_model.joblib')
 
 # 2. Judul dan Deskripsi Web
 st.title("🏥 Diabetes Risk Prediction Tool")
