@@ -99,9 +99,12 @@ if st.button('Prediksi Risiko Diabetes'):
     
     if probabilitas_sakit >= threshold:
         st.error(f"⚠️ POSITIF DIABETES (High Risk)")
+        st.error(f"⚠️ ANJAY DIABETES!")
         st.write(f"Probabilitas: {probabilitas_sakit*100:.2f}%")
-        st.write("Saran: Segera konsultasi ke dokter untuk tes HbA1c.")
+        st.write("Saran: Segera konsultasi ke dokter untuk tes HbA1c (Tes Gula Darah), dan\n" \
+        "STOP konsumsi makanan tinggi gula serta perbanyak aktivitas fisik.")
     else:
         st.success(f"✅ NEGATIF DIABETES (Low Risk)")
+        st.success(f"✅ ANDA SEHAT!")
         st.write(f"Probabilitas: {probabilitas_sakit*100:.2f}%")
         st.write("Saran: Tetap jaga pola hidup sehat.")
