@@ -32,7 +32,7 @@ def user_input_features():
     Age = st.sidebar.slider('Kategori Umur (1: Muda - 13: Lansia)', 1, 13, 8)
 
     # --- FITUR TAMBAHAN (Diisi Default agar Error tidak muncul) ---
-    # Idealnya kamu buat inputan untuk semua ini juga
+    # Idealnya buat inputan untuk semua ini juga
     Smoker = 0
     Stroke = 0
     HeartDiseaseorAttack = 0
@@ -50,7 +50,7 @@ def user_input_features():
     Income = 5
     CholCheck = 1 # Asumsi pernah cek kolesterol
 
-    # Simpan dalam DataFrame sesuai urutan kolom saat training (PENTING!)
+    # Simpan dalam DataFrame sesuai urutan kolom saat training (PENTING GAIS!)
     data = {
         'HighBP': HighBP,
         'HighChol': HighChol,
@@ -92,8 +92,8 @@ if st.button('Prediksi Risiko Diabetes'):
     
     st.subheader('Hasil Prediksi:')
     
-    # Ambang batas (Threshold) kamu tadi 0.3
-    # Kita terapkan logika threshold manual
+    # Ambang batas (Threshold) 0.3
+    # terapkan logika threshold manual
     probabilitas_sakit = prediction_proba[0][1]
     threshold = 0.3
     
